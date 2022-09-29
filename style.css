@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: 'Abyssinica SIL',"Arial", serif;
+  background-color: rgb(108, 104, 100);
+}
+
+.header {
+  margin: 0px;
+  background-color: #0A0A0A;
+}
+
+.nav {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.7%;
+  object-position: center;
+  vertical-align: text-bottom;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.header-line {
+  padding-top: 30px;
+  display: flex;
+  margin: 0px;
+}
+.my-page {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 25px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  text-decoration: none;
+  margin-right: 25px;
+  margin-left: 10px;
+  object-position: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.elements {
+  height: 90vh;
+  background-size: 30%;
+  margin-bottom: -40px;   
+}
+.forsite {
+  size-adjust:initial;
+  vertical-align: middle;
+  float: right;
+  position: relative;
+  top:10px;
+  right: 70px;
+}
+
+.table {
+  float:left;
+  caption-side: top;
+  border:#111011;
+  top: 100px; 
+  margin-bottom: 20px;
+  border-collapse: separate;
+  position: relative;
+  left: 0px;
+  background-color: white;
+}
+
+.down-line {
+  background-color: #111011;
+  height: 2vh;
+  padding-top: 32px;
+  display: flex;
+  align-items:center;
+  
+}
+
+.bottom-items {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 30px;
+  object-position: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.info{
+  color: white;
+  text-decoration: none;
+}
