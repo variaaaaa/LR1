@@ -28,12 +28,7 @@ body {
     display: flex;
     margin: 0px;
 }
-.my-page {
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 22px;
-}
+
 a {
     color: #fff;
     text-decoration: none;
@@ -64,6 +59,7 @@ a {
     background-size: cover;
     width: 40%;
     position:relative;
+    top:10px;
     text-align: center;
 }
 .elements-fb {
@@ -103,13 +99,6 @@ footer {
     font-size: 14px;
     position: relative;
     bottom: -20px;
-}
-
-.my-name {
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
 }
 
 .info {
