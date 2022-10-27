@@ -30,6 +30,7 @@ body {
   font-weight: 700;
   font-size: 25px;
 }
+
 a {
   color: #fff;
   text-decoration: none;
@@ -43,28 +44,44 @@ a {
 }
 
 .elements {
-  height: 90vh;
+  height: 90%;
   background-size: 30%;
-  margin-bottom: -40px;   
 }
+
+.tables {
+  height: 105%;
+  background-size: 30%;
+  margin-left: 50%;
+  margin-top: -250px;
+}
+
 .forsite {
   size-adjust:initial;
   vertical-align: middle;
-  float: right;
   position: relative;
-  top:10px;
-  right: 70px;
+  top: 100px;
+  left:60px;
+}
+
+.text-desc {
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  left: 60px;
+  top: 80px;
+  color: #ebeaed;
 }
 
 .table {
-  float:left;
+  float:right;
   caption-side: top;
   border:#111011;
-  top: 100px; 
+  top: 150px;
+  right: 120px;
   margin-bottom: 20px;
   border-collapse: separate;
   position: relative;
-  left: 0px;
+  left: 100px;
   background-color: white;
 }
 
@@ -74,7 +91,6 @@ a {
   padding-top: 32px;
   display: flex;
   align-items:center;
-  
 }
 
 .bottom-items {
@@ -89,4 +105,16 @@ a {
 .info{
   color: white;
   text-decoration: none;
+}
+
+.list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  top: 165px;
+  right: 90px;
+  background-color: #0b050f;
+  color: #fffefe;
 }
