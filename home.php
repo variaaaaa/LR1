@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="feedback_style.css">
+    <link rel="stylesheet" href="home_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nabla&family=Open+Sans:ital,wght@0,400;0,500;1,400;1,500&family=Poppins&display=swap" rel="stylesheet">
     <?php require "name.php"; ?>
 </head>
 <body>
-<header>
+    <header>
         <div class="header">
             <div class="container">
                 <div class="header-line">
@@ -59,36 +58,28 @@
         </div>
     </header>
     <main>
-        <div class="background-login">
-            <div class="container-fb-form">
-            <form class="feedback_form"  action="home.php" method="post" name="feedback_form">
-                <h1 class="name-fb">Обратная связь</h1>
-                <div class="elements-fb">
-                    <p>ФИО: <input type="text" name="name-input"placeholder="Введите ФИО" size="40" value="<?php if (isset($_GET['name-input'])){
-                        echo $_GET['name-input']; }?>"/></p>
-                    <p>Email: <input type="email" name="email-input"placeholder="Введите email" size="30" value="<?php if (isset($_GET['email-input'])){
-                        echo $_GET['email-input']; }?>"/></p>
-                    <div class="from-where">
-                        <p>Откуда узнали о нас? </p>
-                        <p><input type="radio" name="type-input" value="1" <?php if (isset($_GET['type-input']) & $_GET['type-input']='4'){
-                        echo 'checked';}?>/>Реклама из интернета</p>
-                        <p><input type="radio" name="type-input" value="2" <?php if (isset($_GET['type-input']) & $_GET['type-input']='4'){
-                        echo 'checked';}?>/>Рассказали друзья</p>
-                    </div>
-                    <p>Тип обращения: 
-                    <select size="1" name="letter-type" id="letter-type">
-                        <option value="1">Предложение</option>
-                        <option value="2">Жалоба</option>                        
-                    </select></p>
-                    <div class="appeal-text">
-                        <p>Текст сообщения </p>
-                        <textarea name="tell-us-message" placeholder="Введите текст" rows="5" wrap="soft"></textarea>
-                    </div>
-                    <p>Вложения: <input type="file" name="file-input" multiple></p>
-                    <p>Даю согласие на обработку персональных данных <input type="checkbox"></p>
-                    <p><div class="buttons"><input type="reset"><input type="submit"></div></p>
-                </div>
-            </form>
+    <div class="background-login">
+        <div class="container-fb-form">
+            <h1 class="name-fb">Обратная связь</h1>
+            <div class="elements-fb">
+                <?php
+                echo '<p class="hello-fb"> Здравствуйте, '.$_POST['name-input'].'!</p>';
+                if ($_POST['letter-type'] == '1') {
+                    echo '<p>Спасибо за ваше предложение!</p>';
+                    echo '<textarea>'.$_POST['tell-us-message'].'</textarea>';
+                }else {
+                    echo '<p>Мы рассмотрим Вашу жалобу:</p>';
+                    echo '<textarea>'.$_POST['tell-us-message'].'</textarea>';
+                }
+                if (isset($_POST['file-input']) & $_POST['file-input'] != '') {
+                    echo '<p>Вы приложили следующий файл: '.$_POST['file-input'].'</p>';
+                }
+                else{
+                    echo '<p>Вы не приложили ни одного файла.</p>';
+                }
+                echo '<p><a class="rewrite-fb" href="feedback.php?name-input='.$_POST['name-input'].'&email-input='.$_POST['email-input'].'"><i>Заполнить снова</i></a></p>';
+                ?>
+            </div>
             </div>
         </div>
     </main>
@@ -105,3 +96,4 @@
         </div>
     </footer>  
 </body>
+</html>
