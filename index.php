@@ -10,7 +10,7 @@
 </head>
 <body>
     <header> 
-        <div class="header">
+        <div  class="header">
             <div class="container">
                 <div class="header-line">
                     <div class="nav">
@@ -117,6 +117,11 @@
                 </tbody>
             </table>
         </div>
+        <div class = "table">
+        <table border="3px" bordercolor = "black" bgcolor = "white" width = "1000" align="center">
+        <?php require "table.php"; ?>
+        </table>
+    </div>
     </main>
     <footer>
         <a name="go-to-footer"></a>
